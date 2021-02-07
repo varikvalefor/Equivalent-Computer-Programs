@@ -1,15 +1,23 @@
-#define penis unsigned long long //Twice the size of long long!
-#include <stdio.h>
+#define penis mpz_t
+#include <gmp.h>
+#include <limits.h>
 int main()
 {
-	penis c = 0;
-	penis b[2] = {0,1};
-	while(b[0] + b[1] < 12200160415121876738)
+	penis c;
+	penis b;
+	penis d;
+	mpz_init(c);
+	mpz_init(b);
+	mpz_init(d);
+	mpz_set_ui(b, 1);
+	mpz_set_ui(d, 0);
+	while(true)
 	{
-		c = b[0] + b[1];
-		printf("%llu\n",c);
-		b[0] = b[1];
-		b[1] = c;
+		mpz_add(c,b,d);
+		gmp_printf("%Zd\n", c);
+		mpz_set(b,d);
+		mpz_set(d,c);
 	}
 	return 0;
 }
+
