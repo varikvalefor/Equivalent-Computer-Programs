@@ -1,0 +1,2 @@
+The speed of the Haskell implementaion of 0002 is actually noticeably
+greater than the speed of the C++ implementation of 0002.
