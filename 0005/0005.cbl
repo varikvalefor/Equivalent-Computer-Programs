@@ -19,4 +19,4 @@
            IF (CURRENTX + 1) <= BOUNDARY THEN
              GO TO PARA-PARA
            END-IF.
-        DISPLAY "".
+       DISPLAY "".
