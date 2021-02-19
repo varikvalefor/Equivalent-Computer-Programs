@@ -1,0 +1,3 @@
+PROGRAM A0001
+  PRINT , "Hello, world.";
+END PROGRAM A0001
