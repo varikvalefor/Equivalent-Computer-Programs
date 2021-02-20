@@ -1,2 +1,2 @@
 main :: IO ();
-main = getLine >>= \a -> putStrLn $ reverse a;
+main = getLine >>= (putStrLn . reverse);
