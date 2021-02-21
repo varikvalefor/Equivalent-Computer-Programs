@@ -6,10 +6,8 @@ bool isPrime(mpz_class n)
 	mpz_class m,o,p;
 	o = sqrt(n);
 	for(m = 2; m < o; m++)
-	{
 		if(n % m == 0)
 			return false;
-	}
 	return true;
 }
 
