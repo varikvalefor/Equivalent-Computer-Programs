@@ -1,0 +1,12 @@
+(DEFPARAMETER A 1)
+(LOOP WHILE (> A 0) DO
+	(DEFPARAMETER A (+ 1 A))
+	(IF (EQUAL (MOD A 15) 0)    (FORMAT T "FIZZ BUZZ")
+		(IF (EQUAL (MOD A 5) 0)   (FORMAT T "BUZZ")
+			(IF (EQUAL (MOD A 3) 0) (FORMAT T "FIZZ")
+				(FORMAT T "~d" A)		
+			)
+		)
+	)
+	(FORMAT T "~%")
+)
