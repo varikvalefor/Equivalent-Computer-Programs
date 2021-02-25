@@ -1,0 +1,19 @@
+PROGRAM MAIN
+INTEGER :: A,B;
+A = 0;
+B = 0;
+DO WHILE (.TRUE.)
+  A = A + 1;
+  B = 0;
+  CALL F(A,B);
+END DO
+END PROGRAM MAIN
+
+SUBROUTINE F(A,B)
+INTEGER :: A,B;
+DO WHILE(B < A)
+  B = B + 1;
+  PRINT *, B;
+END DO
+PRINT *, "";
+END
