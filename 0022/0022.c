@@ -2,7 +2,7 @@
 #include <stdio.h>
 #include <string.h>
 
-char * msg = "We are the music makers.";
+char * msg = "We are the music makers.\n";
 
 int main()
 {
@@ -12,6 +12,5 @@ int main()
 		fflush(stdout);
 		nanosleep((const struct timespec []) {0,100000000}, NULL);
 	}
-	printf("\n");
 	main();
 }
