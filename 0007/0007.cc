@@ -3,13 +3,10 @@
 
 int main()
 {
-	mpz_class a, b;
-  
-	while(true)
+	for(mpz_class a = 1;;a++)
 	{
-		a++;
-		for(b = 0;  b < a;  b++)
+		for(mpz_class b = 0; b < a; b++)
 			std::cout << b;
-		std::cout << "\n";
+		std::cout << std::endl;
 	}
 }
