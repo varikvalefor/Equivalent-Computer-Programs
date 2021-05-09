@@ -24,4 +24,6 @@ int main(int argc, char ** argv)
 			listThePhiles(argv[k]);
 	else
 		listThePhiles("./");
+		/* 0023 lists the contents of the current directory if no directory
+		is manually specified. */
 }
