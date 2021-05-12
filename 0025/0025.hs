@@ -4,4 +4,4 @@ faq k = product [2..k];
 
 main :: IO ();
 main = mapM_ (print . faq) [1..];
--- For all j in [1..], faq j is output to the terminal.
+-- For all natural numbers j, faq j is output to the terminal.
