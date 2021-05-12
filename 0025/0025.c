@@ -20,7 +20,7 @@ int main()
 	mpz_init(g);
 	for(mpz_init_set_ui(a, 0) ;; mpz_add_ui(a, a, 1))
 	/* The above line is roughly equivalent to "for(int a = 0 ;; a++)".
-  For all natural numbers a, bracketed bit is "done" on a. */
+	For all natural numbers a, bracketed bit is "done" on a. */
 	{
 		faq(g, a);
 		/* The factorial of a is assigned to g. */
