@@ -16,8 +16,7 @@ getArguments:
 	mov %rax, %rbx
 	ret
 
-# factorial outputs the factorial of EBX to the terminal.  Overflow IS
-# a problem here.
+# factorial moves the factorial of EBX to EAX.
 factorial:
 	mov $1, %eax
 	factorialMainLoop:
