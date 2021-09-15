@@ -7,4 +7,4 @@ for ($currentNum = 1; $currentNum <= $maximumNumber; $currentNum++)
 	$concatenatedNumbers = "$concatenatedNumbers$l";
 }
 
-print "$m\n";
+print "$concatenatedNumbers\n";
