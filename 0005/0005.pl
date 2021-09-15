@@ -1,10 +1,10 @@
 $k = int @ARGV[0];
-$m = "";
+$concatenatedNumbers = "";
 $l = 1;
 
 for ($l = 1; $l <= $k; $l++)
 {
-	$m = "$m$l";
+	$concatenatedNumbers = "$concatenatedNumbers$l";
 }
 
 print "$m\n";
