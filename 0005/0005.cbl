@@ -4,9 +4,15 @@
 
        DATA DIVISION.
        WORKING-STORAGE SECTION.
+      *TARGA contains the first argument of the program.
        01 TARGA    PIC X(69).
+      *The output of this program is the result of concatenating all
+      *integers between 1 and BOUNDARY.
        01 BOUNDARY PIC 9(38) VALUE 86.
+      *CURRENTX is an integer-based representation of the current
+      *number.
        01 CURRENTX PIC 9(38).
+      *CURRENTY is a string-based representation of the current number.
        01 CURRENTY PIC Z(38)9.
 
        PROCEDURE DIVISION.
