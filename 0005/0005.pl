@@ -4,7 +4,7 @@ $currentNum = 1;
 
 for ($currentNum = 1; $currentNum <= $maximumNumber; $currentNum++)
 {
-	$concatenatedNumbers = "$concatenatedNumbers$l";
+	$concatenatedNumbers = "$concatenatedNumbers$currentNum";
 }
 
 print "$concatenatedNumbers\n";
