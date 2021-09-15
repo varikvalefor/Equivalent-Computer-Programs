@@ -1,8 +1,8 @@
 $maximumNumber = int @ARGV[0];
 $concatenatedNumbers = "";
-$l = 1;
+$currentNum = 1;
 
-for ($l = 1; $l <= $maximumNumber; $l++)
+for ($currentNum = 1; $currentNum <= $maximumNumber; $currentNum++)
 {
 	$concatenatedNumbers = "$concatenatedNumbers$l";
 }
