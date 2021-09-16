@@ -14,7 +14,7 @@ mpz_class faktorial(mpz_class g)
 int main()
 {
 	for(mpz_class a = 1 ;; a++)
+		/* For all natural numbers a, std::cout outputs faktorial(a), i.e.,
+		 * the factorial of natural number a. */
 		std::cout << faktorial(a) << std::endl;
-	/* For all natural numbers a, std::cout outputs faktorial(a), i.e.,
-	 * the factorial of natural number a. */
 }
