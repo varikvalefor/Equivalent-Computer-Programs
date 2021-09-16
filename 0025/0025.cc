@@ -1,7 +1,7 @@
 #include <gmpxx.h>
 #include <iostream>
 
-/* 1 */
+/* faktorial(a) is the factorial of a. */
 mpz_class faktorial(mpz_class g)
 {
 	if(g > 1) return g * faktorial(g - 1);
