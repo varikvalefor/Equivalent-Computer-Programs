@@ -3,6 +3,7 @@
 /* faq(a, b) writes the factorial of b to a. */
 void faq(mpz_t result, mpz_t k)
 {
+	/* x is the iterator which is repeatedly multiplied by result. */
 	mpz_t x;
 	mpz_set_ui(x, 1);
 	/* The following line is roughly equivalent to
