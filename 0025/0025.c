@@ -21,7 +21,7 @@ int main()
 	mpz_t a, currentFactorialResult, l;
 	mpz_init(currentFactorialResult);
 	/* The following line is roughly equivalent to "for(int a = 0 ;; a++)".
-	For all natural numbers a, bracketed bit is "done" on a. */
+	 * For all natural numbers a, bracketed bit is "done" on a. */
 	for(mpz_init_set_ui(a, 0) ;; mpz_add_ui(a, a, 1))
 	{
 		/* The factorial of a is assigned to currentFactorialResult. */
