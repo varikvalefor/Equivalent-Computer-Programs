@@ -17,15 +17,15 @@ void faq(mpz_t result, mpz_t k)
 
 int main()
 {
-	mpz_t a, g, l;
-	mpz_init(g);
+	mpz_t a, currentFactorialResult, l;
+	mpz_init(currentFactorialResult);
 	for(mpz_init_set_ui(a, 0) ;; mpz_add_ui(a, a, 1))
 	/* The above line is roughly equivalent to "for(int a = 0 ;; a++)".
 	For all natural numbers a, bracketed bit is "done" on a. */
 	{
-		faq(g, a);
-		/* The factorial of a is assigned to g. */
-		gmp_printf("%Zd\n", g);
-		/* g is output to the terminal. */
+		faq(currentFactorialResult, a);
+		/* The factorial of a is assigned to currentFactorialResult. */
+		gmp_printf("%Zd\n", currentFactorialResult);
+		/* currentFactorialResult is output to the terminal. */
 	}
 }
