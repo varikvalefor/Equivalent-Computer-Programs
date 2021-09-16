@@ -1,5 +1,6 @@
 #include <gmp.h>
 
+/* faq(a, b) writes the factorial of b to a. */
 void faq(mpz_t result, mpz_t k)
 {
 	mpz_t x;
