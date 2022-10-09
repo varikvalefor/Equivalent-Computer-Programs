@@ -132,10 +132,16 @@ _∣_ : ℕ → ℕ → Bool
 n ∣ m = not $ ∅≡ $ filter' (λ x → x * n ≡ᵇ m) $ ℕ↓ m
 \end{code}
 
+\section{la'oi .\texttt{𝕗}.}
+ni'o la'o zoi.\ \texttt{𝕗 n} .zoi.\ liste lo'i ro se dilcymu'o be la'oi .\texttt{n}.\ be'o poi mleca la'oi .\texttt{n}.\ je poi zmadu li re
+
 \begin{code}
 𝕗 : ℕ → List ℕ
 𝕗 t = filter' (λ x → x ∣ t) $ 2 ↓ ℕ↑ (t ∸ 1)
 \end{code}
+
+\section{la'oi .\texttt{ℙ⁇}.}
+ni'o go la'o zoi.\ \texttt{ℙ⁇ n} .zoi.\ jetnu gi la'oi .\texttt{n}.\ mulna'usle
 
 \begin{code}
 ℙ⁇ : ℕ → Bool
