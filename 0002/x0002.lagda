@@ -62,7 +62,7 @@ bool a b true = b
 ni'o go la'o zoi.\ \texttt{∅≡ n} .zoi.\ gi la'oi .\texttt{n}.\ vasru no da
 
 \begin{code}
-∅≡ : {A : Set} → List A → Bool
+∅≡ : ∀ {a} → {A : Set a} → List A → Bool
 ∅≡ [] = true
 ∅≡ _ = false
 \end{code}
@@ -71,7 +71,7 @@ ni'o go la'o zoi.\ \texttt{∅≡ n} .zoi.\ gi la'oi .\texttt{n}.\ vasru no da
 ni'o la'o zoi.\ \texttt{a ↓ b} .zoi.\ liste lo romoi pe'a selvau be la'oi .\texttt{b}.\ je cu se nilzilcmi li su'e ni'e vujnu be lo nilzilcmi be la'oi .\texttt{b}.\ be'o bei la'oi .\texttt{a}.  .i krasi cnici
 
 \begin{code}
-_↓_ : {A : Set} → ℕ → List A → List A
+_↓_ : ∀ {a} → {A : Set a} → ℕ → List A → List A
 0 ↓ xs = xs
 n ↓ [] = []
 (suc n) ↓ (x ∷ xs) = n ↓ xs
@@ -80,10 +80,10 @@ n ↓ [] = []
 \section{la'oi .\texttt{ϕ}.}
 
 \begin{code}
-ϕ : {A : Set} → List A → List A
+ϕ : ∀ {a} → {A : Set a} → List A → List A
 ϕ χ = ϕ' χ []
   where
-  ϕ' : {A : Set} → List A → List A → List A
+  ϕ' : ∀ {a} → {A : Set a} → List A → List A → List A
   ϕ' [] yx = yx
   ϕ' (x ∷ xs) yx = ϕ' xs $ x ∷ yx
 \end{code}
@@ -91,7 +91,7 @@ n ↓ [] = []
 \section{la'oi .\texttt{filter'}.}
 
 \begin{code}
-filter' : {A : Set} → (A → Bool) → List A → List A
+filter' : ∀ {a} → {A : Set a} → (A → Bool) → List A → List A
 filter' p [] = []
 filter' p (x ∷ xs) = bool (filter' p xs) (x ∷ filter' p xs) $ p x
 \end{code}
@@ -100,7 +100,7 @@ filter' p (x ∷ xs) = bool (filter' p xs) (x ∷ filter' p xs) $ p x
 ni'o go nai ge la'oi .\texttt{b}.\ vasru no da gi ko'a goi la'o zoi.\ \texttt{listOr a []} .zoi.\ du la'oi .\texttt{a}.\ gi ko'a remoi selvau la'oi .\texttt{b}.
 
 \begin{code}
-listOr : {A : Set} → A → List A → A
+listOr : ∀ {a} → {A : Set a} → A → List A → A
 listOr x [] = x
 listOr x (y ∷ yx) = y
 \end{code}
