@@ -119,7 +119,7 @@ ni'o la'o zoi.\ \texttt{ℕ↑ n} .zoi.\ zmaduse je cu liste lo mulna'u poi mlec
 
 \begin{code}
 ℕ↑ : ℕ → List ℕ
-ℕ↑ n = ϕ $ ℕ↓ n
+ℕ↑ = ϕ ∘ ℕ↓
 \end{code}
 
 \section{la'o zoi.\ \texttt{∣} .zoi.}
@@ -137,7 +137,7 @@ n ∣ m = not $ ∅≡ $ filter' (λ x → x * n ≡ᵇ m) $ ℕ↓ m
 
 \begin{code}
 ℙ⁇ : ℕ → Bool
-ℙ⁇ n = ∅≡ $ 𝕗 n
+ℙ⁇ = ∅≡ ∘ 𝕗
 \end{code}
 
 \section{la'oi .\texttt{p?ℙ}.}
