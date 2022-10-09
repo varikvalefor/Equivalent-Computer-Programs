@@ -41,15 +41,6 @@ open import Data.Nat.Show
 open import Data.Unit.Polymorphic
 \end{code}
 
-\section{la'oi .\texttt{⋆}.}
-ni'o la'o zoi.\ \texttt{⋆ n} .zoi.\ gripi'i la'oi .\texttt{n}.
-
-\begin{code}
-⋆ : List ℕ → ℕ
-⋆ [] = 1
-⋆ (x ∷ xs) = x * ⋆ xs
-\end{code}
-
 \section{la'oi .\texttt{!}.}
 ni'o la'o zoi.\ \texttt{n !} .zoi.\ fampi'i la'oi .\texttt{n}.
 
@@ -59,7 +50,7 @@ _! = product ∘ drop 1 ∘ upTo ∘ _+_ 1
 \end{code}
 
 \section{la'oi .\texttt{print!+}.}
-ni'o ganai co'e zoi zoi.\ \texttt{print!+ n} .zoi.\ gi ciska lo'i ro fampi'i be lo'i ro kacna'u poi zmadu la'oi .\texttt{n}. be'o lo mu'oi glibau.\ standard output .glibau
+ni'o ganai co'e zoi zoi.\ \texttt{print!+ n} .zoi.\ gi ciska lo'i ro fampi'i be lo'i ro kacna'u poi zmadu la'oi .\texttt{n}.\ be'o lo mu'oi glibau.\ standard output .glibau
 
 \begin{code}
 {-# TERMINATING #-}
