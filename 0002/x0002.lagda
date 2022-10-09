@@ -34,6 +34,8 @@
 \newunicodechar{∣}{\ensuremath{\mathnormal{|}}}
 \newunicodechar{⁇}{\ensuremath{\mathrm{?\!?}}}
 \newunicodechar{∘}{\ensuremath{\mathnormal{\circ}}}
+\newunicodechar{∀}{\ensuremath{\mathnormal{\forall}}}
+\newunicodechar{⊤}{\ensuremath{\mathnormal{\top}}}
 
 \begin{document}
 \section{le me'oi .preamble.}
