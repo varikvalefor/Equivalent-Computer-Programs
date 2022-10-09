@@ -8,7 +8,6 @@
 \usepackage{unicode-math}
 \usepackage{newunicodechar}
 
-
 \newunicodechar{λ}{\ensuremath{\mathnormal\lambda}}
 \newunicodechar{∷}{\ensuremath{\mathnormal\Colon}}
 \newunicodechar{∨}{\ensuremath{\mathnormal\vee}}
