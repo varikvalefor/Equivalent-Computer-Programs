@@ -72,7 +72,7 @@ envNames = pure envNames′
   {-#
     COMPILE GHC envNames′ =
       unsafePerformIO $
-      map (pack . fst) <$> SE.getEnvironment
+      fmap (pack . fst) <$> SE.getEnvironment
   #-}
 \end{code}
 
@@ -89,7 +89,7 @@ envValues = pure envValues′
   {-#
     COMPILE GHC envValues′ =
     unsafePerformIO $
-    map (pack . snd) <$> SE.getEnvironment
+    fmap (pack . snd) <$> SE.getEnvironment
   #-}
 \end{code}
 
