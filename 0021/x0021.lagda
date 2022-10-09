@@ -62,7 +62,7 @@ record Env : Set where
 \section{la'oi .\texttt{envNames}.}
 ni'o la'oi .\texttt{envNames}.\ liste lo'i cmene be lo'i me'oi .environment.\ snicne
 
-\naMehoiUnsafe
+\envBoilerplate
 
 \begin{code}
 envNames : IO (List String)
@@ -79,7 +79,7 @@ envNames = pure envNames′
 \section{la'oi .\texttt{envValues}.}
 ni'o la'oi .\texttt{envValues}.\ liste lo'i se me'oi .environment.\ snicne
 
-\naMehoiUnsafe
+\envBoilerplate
 
 \begin{code}
 envValues : IO (List String)
