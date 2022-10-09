@@ -162,7 +162,7 @@ ni'o ganai co'e zoi zoi.\ \texttt{f n} .zoi.\ gi ciska lo'i ro mulna'usle poi zm
 .i na me'oi .terminate.  .i ku'i na sarcu\ldots je na se djica
 
 \begin{code}
-{-# TERMINATING #-}
+{-# NON_TERMINATING #-}
 f : ∀ {a} → ℕ → IO {a} ⊤
 f x = p?ℙ x >> f (x + 1)
 \end{code}
