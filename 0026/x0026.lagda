@@ -55,8 +55,16 @@ open import Data.Nat.Show
 open import Data.Nat.DivMod
 open import Data.Unit.Polymorphic
 open import Data.List
-  using (foldr; _∷_)
-  renaming (downFrom to ℕ↓; reverse to ϕ)
+  using (foldr; _∷_; downFrom; List)
+  renaming (reverse to ϕ)
+\end{code}
+
+\section{la'o zoi.\ \texttt{ℕ↓} .zoi.}
+ni'o la'o zoi.\ \texttt{ℕ↓ n} .zoi.\ to'e zmaduse je cu liste lo'i ro kacna'u poi dubjavme'a la'oi .\texttt{n}.
+
+\begin{code}
+ℕ↓ : ℕ → List ℕ
+ℕ↓ n = n ∷ downFrom n
 \end{code}
 
 \section{la'oi .\texttt{clevSum}.}
@@ -72,7 +80,7 @@ ni'o la'o zoi.\ \texttt{dumbSum n} .zoi.\ grisumji lo'i ro kacna'u poi dubjavme'
 
 \begin{code}
 dumbSum : ℕ → ℕ
-dumbSum n = foldr _+_ 0 $ n ∷ ℕ↓ n
+dumbSum n = foldr _+_ 0 $ ℕ↓ n
 \end{code}
 
 \section{la'oi .\texttt{tp}.}
@@ -94,6 +102,6 @@ tp k = sx ++ ds ++ " = " ++ cs ++ "."
 
 \begin{code}
 main : Main
-main = run $ IO.List.mapM′ (putStrLn ∘ tp) $ ϕ $ _∷_ 6000 $ ℕ↓ 6000
+main = run $ IO.List.mapM′ (putStrLn ∘ tp) $ ϕ $ ℕ↓ 6000
 \end{code}
 \end{document}
