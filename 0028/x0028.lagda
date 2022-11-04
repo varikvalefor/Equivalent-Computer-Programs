@@ -97,11 +97,12 @@ readFile t = pure $ readFile' t
   {-# FOREIGN GHC import qualified Data.Text as T #-}
   {-# FOREIGN GHC import System.IO.Unsafe #-}
   {-#
-    COMPILE GHC readFile' =
-    \t _ -> map (fromIntegral . fromEnum) $
-            B.unpack $
-            unsafePerformIO $
-            B.readFile $ T.unpack t
+    COMPILE GHC readFile' = (\t _ -> toNList $ u $ readFile'' t)
+    where {
+      toNList = map (fromIntegral . fromEnum) . B.unpack;
+      u = unsafePerformIO;
+      readFile'' = B.readFile . T.unpack;
+    }
   #-}
 \end{code}
 
