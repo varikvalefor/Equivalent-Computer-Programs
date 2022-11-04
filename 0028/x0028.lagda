@@ -83,7 +83,7 @@ _ []≡ᵇ [] = false
 \section{la'oi .\F{readFile}.}
 ni'o ro da poi datnyvei je poi se cmene la'oi .\B K.\ zo'u la'o zoi.\ \F{readFile} \B K .zoi.\ me'oi .return. lo liste be lo'i ro me'oi .Unicode.\ lerfu pe'a ru'e poi selvau da
 
-\subsection{le su'u pilno ko'a goi la'oi .\F{unsafePerformIO}.}
+\subsection{le su'u pilno ko'a goi la'oi .\AgdaPragma{unsafePerformIO}.}
 ni'o pilno ko'a  .i ku'i me'oi .safe. ki'u le nu pilno zo'oi .pure.
 
 .i pilno ko'a ki'u le su'u lo nu pilno ko'a cu filri'a lo nu .importe lo me'oi .IO. fancu pe la .xaskyl. kei noi se krinu le su'u lo nu me'oi .translate. la'oi .IO. pe la .xaskyl. la'oi .IO. pe le me'oi .stdlib. pe la'oi .Agda. cu mabla
