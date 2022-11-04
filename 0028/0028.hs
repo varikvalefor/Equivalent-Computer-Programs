@@ -1,4 +1,6 @@
+import Prelude hiding (readFile);
 import System.Environment;
+import Data.ByteString;
 import Control.Monad;
 import System.Exit;
 import Data.Bool;
