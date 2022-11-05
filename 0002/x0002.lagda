@@ -37,7 +37,13 @@
 \newunicodechar{∀}{\ensuremath{\mathnormal{\forall}}}
 \newunicodechar{⊤}{\ensuremath{\mathnormal{\top}}}
 
+\title{le me'oi .Agda.\ versiio be le proga poi ciska le ro mulna'usle lo mu'oi glibau.\ standard output .glibau.}
+\author{la .varik.\ .VALefor.}
+
 \begin{document}
+
+\maketitle
+
 \section{le me'oi .preamble.}
 \begin{code}
 {-# OPTIONS --guardedness #-}
