@@ -70,7 +70,7 @@ _<=<_ : ∀ {a} → {A B C : Set a}
 \section{la'o zoi.\ \Sym{[]≡ᵇ} .zoi.}
 ni'o go la'o zoi.\ \B a \Sym{[]≡ᵇ} \B b .zoi.\ jetnu gi la'oi .\B a.\ du la'oi .\B b.
 
-ni'o go la'o zoi.\ \B a \Sym{[]≡ᵇ} \B b .zoi.\ jetnu gi ge lo nilzilcmi be la'oi .\B a.\ cu nilzilcmi la'oi .\B b.\ ge ro da poi dubjavme'a lo nilzilcmi be la'oi .\B a.\ je poi zmadu li no zo'u lo da moi selvau be la'oi .\B a.\ cu du lo da moi selvau be la'oi .\B b.
+ni'o go la'o zoi.\ \B a \Sym{[]≡ᵇ} \B b .zoi.\ jetnu gi ge lo nilzilcmi be la'oi .\B a.\ cu nilzilcmi la'oi .\B b.\ gi ro da poi dubjavme'a lo nilzilcmi be la'oi .\B a.\ je poi zmadu li no zo'u lo meirmoi be da bei fo la'oi .\B a.\ cu du lo meirmoi be da bei fo la'oi .\B b.
 
 \begin{code}
 _[]≡ᵇ_ : List ℕ → List ℕ → Bool
