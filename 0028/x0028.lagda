@@ -75,9 +75,8 @@ ni'o go la'o zoi.\ \B a \Sym{[]≡ᵇ} \B b .zoi.\ jetnu gi ge lo nilzilcmi be l
 \begin{code}
 _[]≡ᵇ_ : List ℕ → List ℕ → Bool
 [] []≡ᵇ [] = true
-[] []≡ᵇ _ = false
-_ []≡ᵇ [] = false
 (a ∷ as) []≡ᵇ (b ∷ bs) = (a ≡ᵇ b) ∧ (as []≡ᵇ bs)
+_ []≡ᵇ _ = false
 \end{code}
 
 \section{la'oi .\F{readFile}.}
