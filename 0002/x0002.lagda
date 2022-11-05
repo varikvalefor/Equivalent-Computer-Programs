@@ -86,6 +86,7 @@ n ↓ [] = []
 \end{code}
 
 \section{la'oi .\texttt{ϕ}.}
+ni'o la'o zoi.\ \F ϕ \B d .zoi.\ fatne la'oi .\B d.
 
 \begin{code}
 ϕ : ∀ {a} → {A : Set a} → List A → List A
