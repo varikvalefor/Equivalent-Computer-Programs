@@ -6,9 +6,6 @@ int main(int argc, char **argv)
 {
 	std::fstream theoUt;
 	theoUt.open(argv[1], std::ios_base::out);
-	theoUt << "";
-	theoUt.close();
-	theoUt.open(argv[1], std::ios_base::app);
 	std::string curResp;
 	while(std::getline(std::cin, curResp))
 	{
