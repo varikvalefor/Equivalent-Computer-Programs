@@ -12,7 +12,7 @@
 
 \newunicodechar{∘}{\ensuremath{\mathnormal\circ}}
 
-\title{le me'oi .Agda.\ proga poi ciska lo fatne be lo lerpinsle pe lo mu'oi glibau.\ standard input .glibau.\ lo mu'oi glibau.\ standard output .glibau.}
+\title{le me'oi .Agda.\ proga poi ke'a ciska lo fatne be lo lerpinsle pe lo mu'oi glibau.\ standard input .glibau.\ lo mu'oi glibau.\ standard output .glibau.}
 \author{la .varik.\ .VALefor.}
 
 \begin{document}
