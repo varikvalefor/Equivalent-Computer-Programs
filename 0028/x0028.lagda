@@ -48,6 +48,8 @@ open import System.Exit
     exitSuccess to yay
   )
 open import System.Environment
+
+import Agda.Builtin.IO as BIO
 \end{code}
 
 \section{la'oi .\F{bool}.}
@@ -82,24 +84,18 @@ _ []≡ᵇ _ = false
 \section{la'oi .\F{readFile}.}
 ni'o ro da poi datnyvei je poi se cmene la'oi .\B K.\ zo'u la'o zoi.\ \F{readFile} \B K .zoi.\ me'oi .return. lo liste be lo'i ro me'oi .Unicode.\ lerfu pe'a ru'e poi selvau da
 
-\subsection{le su'u pilno ko'a goi la'oi .\AgdaPragma{unsafePerformIO}.}
-ni'o pilno ko'a  .i ku'i me'oi .safe. ki'u le nu pilno zo'oi .pure.
-
-.i pilno ko'a ki'u le su'u lo nu pilno ko'a cu filri'a lo nu .importe lo me'oi .IO.\ fancu pe la .xaskyl.\ kei noi se krinu le su'u lo nu me'oi .translate.\ la'oi .IO.\ pe la .xaskyl.\ la'oi .IO.\ pe le me'oi .stdlib.\ pe la'oi .Agda.\ cu mabla
-
 \begin{code}
 readFile : String → IO $ List ℕ
-readFile t = pure $ readFile' t
+readFile t = lift $ readFile' t
   where
-  postulate readFile' : String → List ℕ
+  postulate readFile' : String → BIO.IO $ List ℕ
   {-# FOREIGN GHC import qualified Data.ByteString as B #-}
   {-# FOREIGN GHC import qualified Data.Text as T #-}
   {-# FOREIGN GHC import System.IO.Unsafe #-}
   {-#
-    COMPILE GHC readFile' = (\t _ -> toNList $ u $ readFile'' t)
+    COMPILE GHC readFile' = (\t _ -> toNList <$> readFile'' t)
     where {
       toNList = map (fromIntegral . fromEnum) . B.unpack;
-      u = unsafePerformIO;
       readFile'' = B.readFile . T.unpack;
     }
   #-}
