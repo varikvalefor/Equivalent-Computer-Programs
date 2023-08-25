@@ -84,6 +84,8 @@ _ []≡ᵇ _ = false
 \section{la'oi .\F{readFile}.}
 ni'o ro da poi datnyvei je poi se cmene la'oi .\B K.\ zo'u la'o zoi.\ \F{readFile} \B K .zoi.\ me'oi .return. lo liste be lo'i ro me'oi .Unicode.\ lerfu pe'a ru'e poi selvau da
 
+ni'o tu'a la'oi .\D ℕ.\ filri'a tu'a lo me'oi .binary.\ datnyvei  .i ga je la'oi .\D{String}.\ tolmapti lo su'o datnyvei gi ku'i la'o zoi.\ \D{List}\ \D ℕ .zoi.\ mapti lo ro datnyvei
+
 \begin{code}
 readFile : String → IO $ List ℕ
 readFile t = lift $ readFile' t
