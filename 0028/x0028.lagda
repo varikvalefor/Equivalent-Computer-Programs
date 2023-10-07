@@ -56,7 +56,7 @@ import Agda.Builtin.IO as BIO
 ni'o gonai ge la'oi .\B c.\ me'oi .\F{true}.\ gi ko'a goi la'o zoi.\ \F{bool} \B a \B b \B c .zoi.\ du la'oi .\B b.\ gi ko'a du la'oi .\B b.
 
 \begin{code}
-bool : ∀ {a} → {A : Set a} → A → A → (Bool → A)
+bool : ∀ {a} → {A : Set a} → A → A → Bool → A
 bool a b = λ c → if c then b else a
 \end{code}
 
