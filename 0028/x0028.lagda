@@ -88,7 +88,7 @@ ni'o tu'a la'oi .\D ℕ.\ filri'a tu'a lo me'oi .binary.\ datnyvei  .i ga je la'
 
 \begin{code}
 readFile : String → IO $ List ℕ
-readFile t = lift $ readFile' t
+readFile = lift ∘ readFile'
   where
   postulate readFile' : String → BIO.IO $ List ℕ
   {-# FOREIGN GHC import qualified Data.ByteString as B #-}
