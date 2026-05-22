@@ -1,0 +1,41 @@
+.data
+	lerseltcidu:	.space 8192
+.text
+top:
+	la	a0,	lerseltcidu
+	li	a1,	8192
+	li	a7,	8
+	ecall
+
+	la	a1,	lerseltcidu
+	mv	s0,	a1
+fanmoFacki:
+	addi	a1,	a1,	4
+	lw	a0,	(a1)
+	bnez	a0,	fanmoFacki
+	addi	a0,	a0,	-4
+lupe:
+	lw	a0,	(a1)
+	jal cusku
+	
+	addi	a1,	a1,	-4
+	bge	a1,	s0,	lupe	
+fanmo:
+	li	a0,	'\n'
+	li	a7,	11
+	ecall
+	li	a7,	10
+	ecall
+	
+cusku:
+	mv	t0,	a0
+	li	t1,	0xff000000
+	li	a7,	11
+cusku_l:
+	and	a0,	t0,	t1
+	srli	a0,	a0,	24
+	ecall
+	slli	t0,	t0,	8
+	bgt	t0,	x0,	boxL
+	
+	ret
