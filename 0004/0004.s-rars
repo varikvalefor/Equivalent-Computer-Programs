@@ -13,7 +13,6 @@ fanmoFacki:
 	addi	a1,	a1,	4
 	lw	a0,	(a1)
 	bnez	a0,	fanmoFacki
-	addi	a0,	a0,	-4
 lupe:
 	lw	a0,	(a1)
 	jal cusku
@@ -36,6 +35,6 @@ cusku_l:
 	srli	a0,	a0,	24
 	ecall
 	slli	t0,	t0,	8
-	bgt	t0,	x0,	boxL
+	bgt	t0,	x0,	cusku_l
 	
 	ret
